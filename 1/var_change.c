@@ -3,6 +3,7 @@
 
 int main() {
   int num = 4;
+  int num_tmp = num;
   int values[num];
 
   printf("Enter %d integers: \n", num);
@@ -21,7 +22,7 @@ char name_values[] = {'a', 'b', 'c', 'd'};
   printf("Displaying Change Variable: \n");
 
    for (int count = num - 1; count >= 0; count--)  {
-     int antivar = num - 4; //считаем в обратную сторону для массива с именами переменных
+     int antivar = num - num_tmp; //считаем в обратную сторону для массива с именами переменных
      int n = abs(antivar);
      printf("Variable change is %c and value %d\n", name_values[n], values[count]);
      num--;
