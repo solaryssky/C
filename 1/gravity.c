@@ -8,17 +8,21 @@ int main(){
 
 	scanf("%lf", &x);
 
-	if(x < 0)
-     {
-        printf("Error negative value!\n");
-				exit(0);
-      }
-			else{
-				printf("Gravity will be for weight %.4f is %.4f H\n", x, grav = x * 9.8);
-			}
+	if(x < 0) {
+        	printf("Error negative value!\n");
+		// exit(0); - системный вызов, сразу прекращает работу всей программы
+		return 1;
+      	} else {
+		// правильно, но нечитабельно - присваивание теряется среди другого кода
+		// printf("Gravity will be for weight %.4f is %.4f H\n", x, grav = x * 9.8);
+		
+		// лучше:
+		grav = x * 9.8;
+		printf("Gravity will be for weight %.4f is %.4f H\n", x, grav);
+		
+		// еще один вариант (меньше кода и переменная grav не нужна вообще)
+		// printf("Gravity will be for weight %.4f is %.4f H\n", x, x * 9.8);
+	}
 
-  return 0;
-
-
-
+  	return 0;
 }
