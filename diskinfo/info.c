@@ -13,11 +13,7 @@ int main(int argc, char *argv[])
 	
     char *keys = argv[1];
     char *pathes = argv[2];
-	
-	if (argv[1] == NULL){
-		keys = "-t";
-		}
-	
+		
 	if (argv[2] == NULL){
 		pathes = "/";
 		}	
