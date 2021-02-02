@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		}	
 	
 	
-    printf("Path %s\n", pathes);
+    //printf("Path %s\n", pathes);
     
     const unsigned int GB = (1024 * 1024) * 1024;
     struct statvfs buffer;
