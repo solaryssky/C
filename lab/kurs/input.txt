@@ -1,0 +1,6 @@
+int fputc ( int character, FILE * stream );
+
+Write character to stream
+Writes a character to the stream and advances the position indicator.
+
+The character is written at the position indicated by the internal position indicator of the stream, which is then automatically advanced by one.
