@@ -48,12 +48,12 @@ void listdir(const char *name, int indent, int td)
 		   long diff_sec = seconds - 86400*td;//1 day second * day	
 			
 			if(buff.st_mtim.tv_sec < diff_sec){
-                //fprintf(stdout, "%s [%s] (%d)\n", name, entry->d_name, indent+1);
-			     // Append fullPath to entry->d_name here
-                   					  
-
-				 printf("%s/%s/ %ld %s %ld %ld\n", name, entry->d_name, buff.st_mtim.tv_sec, ctime(&times), seconds, diff_sec);
-				 listdir(path, indent + 1, td);
+                //fprintf(stdout, "%s [%s] (%d)\n", name, entry->d_name, indent+1);                   				 
+				 
+				     printf("%s/ %ld %s %ld %ld\n", path, buff.st_mtim.tv_sec, ctime(&times), seconds, diff_sec);
+					 
+				listdir(path, indent + 1, td);
+				
 				}
 				
 				//printf("%s %s\n", entry->d_name, ctime(&times)); //
